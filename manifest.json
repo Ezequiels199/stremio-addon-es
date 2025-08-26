@@ -1,0 +1,54 @@
+{
+  "id": "tmdb-addon",
+  "version": "3.1.7",
+  "favicon": "https://94c8cb9f702d-tmdb-addon.baby-beamup.club/favicon.png",
+  "logo": "https://94c8cb9f702d-tmdb-addon.baby-beamup.club/logo.png",
+  "background": "https://94c8cb9f702d-tmdb-addon.baby-beamup.club/background.png",
+  "name": "Complemento de la base de datos de películas",
+  "description": "Complemento de Stremio que proporciona metadatos completos para películas y series de TMDB. Configuración: Idioma: es-MX | Cuenta de TMDB: No conectada | Integración con MDBList: No | Integración con IMDb: Habilitada | Búsqueda: Habilitada | Catálogos activos: 28",
+  "resources": ["catalog", "meta"],
+  "types": ["movie", "series"],
+  "idPrefixes": ["tmdb:", "tt"],
+  "stremioAddonsConfig": {
+    "issuer": "https://stremio-addons.net",
+    "signature": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..."
+  },
+  "behaviorHints": {
+    "configurable": true,
+    "configurationRequired": false
+  },
+  "catalogs": [
+    {
+      "id": "tmdb.top",
+      "type": "movie",
+      "name": "Películas populares",
+      "pageSize": 20,
+      "extra": [
+        { "name": "genre", "options": ["Acción","Animación","Aventura","Bélica","Ciencia ficción","Comedia","Crimen","Documental","Drama","Familia","Fantasía","Historia","Misterio","Música","Película de TV","Romance","Suspenso","Terror","Occidental"], "isRequired": false },
+        { "name": "skip" }
+      ]
+    },
+    {
+      "id": "tmdb.top",
+      "type": "series",
+      "name": "Series populares",
+      "pageSize": 20,
+      "extra": [
+        { "name": "genre", "options": ["Acción y Aventura","Animación","Comedia","Crimen","Documental","Drama","Familia","Infantil","Misterio","Noticias","Reality","Ciencia ficción y fantasía","Telenovela","Charla","Guerra y Política","Occidental"], "isRequired": false },
+        { "name": "skip" }
+      ]
+    },
+    {
+      "id": "tmdb.search",
+      "type": "movie",
+      "name": "Buscar películas",
+      "extra": [ { "name": "search", "isRequired": true } ]
+    },
+    {
+      "id": "tmdb.search",
+      "type": "series",
+      "name": "Buscar series",
+      "extra": [ { "name": "search", "isRequired": true } ]
+    }
+  ]
+}
