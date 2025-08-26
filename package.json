@@ -1,0 +1,12 @@
+{
+  "name": "stremio-addon-es",
+  "version": "1.0.0",
+  "description": "Add-on de Stremio traducido al español",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
